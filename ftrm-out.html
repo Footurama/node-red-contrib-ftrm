@@ -1,0 +1,36 @@
+<script type="text/javascript">
+	RED.nodes.registerType('ftrm-out',{
+		category: 'output',
+		color: '#3fadb5',
+		align: 'right',
+		defaults: {
+			realm: {value: '', type: 'ftrm-config'},
+			name: {value: ''},
+			pipe: {value: ''}
+		},
+		inputs: 1,
+		icon: 'white-globe.png',
+		label: function() {
+			return this.name || this.pipe || "ftrm";
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="ftrm-out">
+	<div class="form-row">
+		<label for="node-input-realm"><i class="icon-globe"></i> Realm</label>
+		<input type="text" id="node-input-realm">
+	</div>
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+	<div class="form-row">
+		<label for="node-input-pipe"><i class="icon-bullhorn"></i> Pipe</label>
+		<input type="text" id="node-input-pipe" placeholder="Pipe">
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="ftrm-out">
+	<p>Connects to ftrm and emits events.</p>
+</script>
