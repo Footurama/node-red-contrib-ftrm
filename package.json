@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ftrm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Node for interfacing with FTRM home automation stuff",
   "keywords": [
     "node-red",
@@ -8,6 +8,14 @@
     "iot"
   ],
   "author": "Juergen Fitschen <me@jue.yt>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Footurama/node-red-contrib-ftrm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Footurama/node-red-contrib-ftrm/issues"
+  },
+  "homepage": "https://github.com/Footurama/node-red-contrib-ftrm#readme",
   "license": "MIT",
   "node-red": {
     "nodes": {
