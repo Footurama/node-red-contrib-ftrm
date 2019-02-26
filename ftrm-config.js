@@ -17,6 +17,11 @@ module.exports = function (RED) {
 			this.on('close', (done) => {
 				ftrm.shutdown().catch().then(() => setTimeout(done, 500));
 			});
+			ftrm._bus.hood.on('foundNeigh', (neigh) => {
+				this.log('+ ' + neigh.info.subject.commonName);
+			}).on('lostNeigh', (neigh) => {
+				this.log('- ' + neigh.info.subject.commonName);
+			});
 		});
 	});
 };

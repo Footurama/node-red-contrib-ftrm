@@ -1,7 +1,12 @@
 function factory (opts, input, out) {
 	input = input[0];
 	const topic = input.pipe;
-	input.on('update', (payload, timestamp) => opts.node.send({topic, payload, timestamp}));
+	input.on('update', (payload, timestamp, ctx) => opts.node.send({
+		topic: ctx.event,
+		payload,
+		timestamp,
+		source: ctx.source.info.subject.commonName
+	}));
 }
 
 module.exports = function (RED) {

@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ftrm",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node for interfacing with FTRM home automation stuff",
   "keywords": [
     "node-red",
@@ -37,6 +37,6 @@
     ]
   },
   "dependencies": {
-    "ftrm": "0.1.0"
+    "ftrm": "^0.2.0"
   }
 }
